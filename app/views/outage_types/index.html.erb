@@ -1,0 +1,31 @@
+<h1>Listing outage_types</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Code</th>
+    <th>Description</th>
+    <th>Active</th>
+    <th>Created by</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @outage_types.each do |outage_type| %>
+  <tr>
+    <td><%= outage_type.name %></td>
+    <td><%= outage_type.code %></td>
+    <td><%= outage_type.description %></td>
+    <td><%= outage_type.active %></td>
+    <td><%= outage_type.created_by %></td>
+    <td><%= link_to 'Show', outage_type %></td>
+    <td><%= link_to 'Edit', edit_outage_type_path(outage_type) %></td>
+    <td><%= link_to 'Destroy', outage_type, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Outage type', new_outage_type_path %>

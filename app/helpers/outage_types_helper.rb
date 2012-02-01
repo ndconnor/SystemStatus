@@ -1,0 +1,2 @@
+module OutageTypesHelper
+end

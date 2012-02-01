@@ -1,0 +1,57 @@
+<%= form_for(@status_report) do |f| %>
+  <% if @status_report.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@status_report.errors.count, "error") %> prohibited this status_report from being saved:</h2>
+
+      <ul>
+      <% @status_report.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name %>
+  </div>
+  <div class="field">
+    <%= f.label :outage_type_id %><br />
+    <%= f.number_field :outage_type_id %>
+  </div>
+  <div class="field">
+    <%= f.label :start_time %><br />
+    <%= f.number_field :start_time %>
+  </div>
+  <div class="field">
+    <%= f.label :end_time %><br />
+    <%= f.number_field :end_time %>
+  </div>
+  <div class="field">
+    <%= f.label :affected_groups %><br />
+    <%= f.text_field :affected_groups %>
+  </div>
+  <div class="field">
+    <%= f.label :affected_services %><br />
+    <%= f.text_field :affected_services %>
+  </div>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description %>
+  </div>
+  <div class="field">
+    <%= f.label :scheduled %><br />
+    <%= f.check_box :scheduled %>
+  </div>
+  <div class="field">
+    <%= f.label :resolved %><br />
+    <%= f.check_box :resolved %>
+  </div>
+  <div class="field">
+    <%= f.label :created_by %><br />
+    <%= f.text_field :created_by %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

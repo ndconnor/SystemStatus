@@ -1,0 +1,45 @@
+<h1>Listing status_reports</h1>
+
+<table>
+  <tr>
+    <th>Name</th>
+    <th>Outage type</th>
+    <th>Start time</th>
+    <th>End time</th>
+    <th>Affected groups</th>
+    <th>Affected services</th>
+    <th>Description</th>
+    <th>Scheduled</th>
+    <th>Resolved</th>
+    <th>Created by</th>
+    <th>Created at</th>
+    <th>Updated at</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @status_reports.each do |status_report| %>
+  <tr>
+    <td><%= status_report.name %></td>
+    <td><%= status_report.outage_type_id %></td>
+    <td><%= status_report.start_time %></td>
+    <td><%= status_report.end_time %></td>
+    <td><%= status_report.affected_groups %></td>
+    <td><%= status_report.affected_services %></td>
+    <td><%= status_report.description %></td>
+    <td><%= status_report.scheduled %></td>
+    <td><%= status_report.resolved %></td>
+    <td><%= status_report.created_by %></td>
+    <td><%= status_report.created_at %></td>
+    <td><%= status_report.updated_at %></td>
+    <td><%= link_to 'Show', status_report %></td>
+    <td><%= link_to 'Edit', edit_status_report_path(status_report) %></td>
+    <td><%= link_to 'Destroy', status_report, confirm: 'Are you sure?', method: :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Status report', new_status_report_path %>

@@ -1,0 +1,3 @@
+class StatusReport < ActiveRecord::Base
+	belongs_to :outage_type
+end

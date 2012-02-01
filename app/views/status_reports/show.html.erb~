@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @status_report.name %>
+</p>
+
+<p>
+  <b>Outage type:</b>
+  <%= @status_report.outage_type_id %>
+</p>
+
+<p>
+  <b>Start time:</b>
+  <%= @status_report.start_time %>
+</p>
+
+<p>
+  <b>End time:</b>
+  <%= @status_report.end_time %>
+</p>
+
+<p>
+  <b>Affected groups:</b>
+  <%= @status_report.affected_groups %>
+</p>
+
+<p>
+  <b>Affected services:</b>
+  <%= @status_report.affected_services %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @status_report.description %>
+</p>
+
+<p>
+  <b>Scheduled:</b>
+  <%= @status_report.scheduled %>
+</p>
+
+<p>
+  <b>Resolved:</b>
+  <%= @status_report.resolved %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @status_report.created_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_status_report_path(@status_report) %> |
+<%= link_to 'Back', status_reports_path %>

@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @outage_type.name %>
+</p>
+
+<p>
+  <b>Code:</b>
+  <%= @outage_type.code %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @outage_type.description %>
+</p>
+
+<p>
+  <b>Active:</b>
+  <%= @outage_type.active %>
+</p>
+
+<p>
+  <b>Created by:</b>
+  <%= @outage_type.created_by %>
+</p>
+
+
+<%= link_to 'Edit', edit_outage_type_path(@outage_type) %> |
+<%= link_to 'Back', outage_types_path %>
